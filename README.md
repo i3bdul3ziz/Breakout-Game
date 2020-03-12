@@ -4,7 +4,7 @@
 
 In this game the player have scores and lives, so if the player hit one brick he will get one score, and if the player distroy all the bricks then we have a WINNER,but whenever the ball touches the bottom wall the player will lose one life so you need to make the holder hit the ball if there are no more lives left then GAME OVER (:
 
-![landing page](img/bg-canvas.png)
+![landing page](img/landing-page.png)
 
 ## Technologies
 
