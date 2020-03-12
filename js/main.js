@@ -48,6 +48,7 @@ function mouseDownHandler(e){
     // mouse state set to true 
     mousedown = true
     x = holderX - e.clientX
+
 }
 
 function mouseUpHandler (){
@@ -61,7 +62,7 @@ function mouseMove(e){
     // Now we calculate the difference upwards
         holderX = e.clientX + x
         if(holderX < 0){
-            holderX = 0
+            holderX = 0.1
         }
         if(holderX + holderW > canvas.width){
             holderX = canvas.width - holderW
@@ -90,7 +91,7 @@ function keyUpHandler(e) {
     }
 }
 
-// 
+// function of collision between the bricks and the ball
 function bricksCollision() {
     for(let c = 0; c < brickColumnCount; c++) {
         for(let r = 0; r < brickRowCount; r++) {
@@ -119,7 +120,7 @@ function wallHolderCollision(){
     } // bottom wall logic if the ball hit the bottom
     else if(ballY + dy > canvas.height - ballRadius){ 
         //if the x axis of the ball greter than x axis of the holder
-        if(ballX > holderX && ballX < holderX + holderW) {
+        if(ballX > holderX && ballX < holderX + holderW && holderX) {
             // check where the ball hit the holder
             let collidePoint = ballX - (holderX + holderW/2)
             
@@ -131,6 +132,14 @@ function wallHolderCollision(){
                 
             dx = 4 * Math.sin(angle)
             dy = -4 * Math.cos(angle)
+
+
+            console.log(ballX)
+            console.log(holderX)
+            console.log(collidePoint)
+            console.log(angle)
+            console.log(dx)
+            console.log(dy)
         }else{ // this is when the ball touch the bottom wall
             lives--
             if(!lives) { //if no lives left the Game Over
@@ -225,7 +234,7 @@ function draw(){
         holderX -= 6
         if (holderX < 0){ //handle the holder when click left arrow 
                           //to make it stop in the left wall
-            holderX = 0
+            holderX = 0.1
         }
     }
 }
