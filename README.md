@@ -22,7 +22,8 @@ In this game the player have scores and lives, so if the player hit one brick he
 
 ## Unsolved Problems
 
-- there is one problem that i tried to solve but i couldn't : **when the player hit the ball by the holder from the left corner the ball will disappear and you will need to refresh the game to play again..**
+- there is one problem that i tried to solve but i couldn't : **when the player hit the ball by the holder from the left corner the ball will disappear and you will need to refresh the game to play again..**  
+#### (**Solved**)
 
 ## Some Additional Information 
 
